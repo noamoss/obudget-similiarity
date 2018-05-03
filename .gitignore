@@ -2,3 +2,4 @@ _pycache__/
 *.py[cod]
 env/
 ./venv
+.git
