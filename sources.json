@@ -1,0 +1,6 @@
+{
+      "procurement-contract":
+          {
+            "datapackage_path": "http://next.obudget.org/datapackages/procurement/spending/latest-contract-spending/datapackage.json"
+          }
+}
