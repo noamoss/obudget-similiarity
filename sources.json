@@ -1,18 +1,44 @@
 {
-      "procurement-contract":
+      "latest-contracts-spending":
           {
             "datapackage_path": "http://next.obudget.org/datapackages/procurement/spending/latest-contract-spending/datapackage.json"
+            ,
+            "entity_id_fieldname": "order_id"
             ,
             "columns_to_index": ["explanation"
                                   ,"purpose"]
             ,
             "meta_columns_list": ["budget_code"
-                                  ,"budget_title"
-                                  ,"buyer_description"
-                                  ,"exemption_reason"
-                                  ,"publisher"
-                                  ,"purchase_method"
-                                  ,"purchasing_unit"
-                                  ,"supplier_name"]
-          }
-}
+                                    ,"budget_title"
+                                    ,"buyer_description"
+                                    ,"exemption_reason"
+                                    ,"publisher"
+                                    ,"purchase_method"
+                                    ,"purchasing_unit"
+                                    ,"supplier_name"
+                                  ]
+          },
+
+          "tenders":
+              {
+                "datapackage_path": "http://next.obudget.org/datapackages/procurement/tenders/all/datapackage.json"
+                ,"entity_id_fieldname": "publication_id"
+                ,"columns_to_index": [
+                                      "description"
+                                      ,"page_title"
+                                    ]
+                ,
+                "meta_columns_list":
+                  [
+                      "publisher"
+                      , "supplier"
+                      , "reason"
+                      , "regulation"
+                      , "volume"
+                      , "subjects"
+                      , "decision"
+                      , "tender_type"
+                  ]
+              }
+
+  }

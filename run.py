@@ -2,8 +2,7 @@
 
 
 from settings import *
-from data_loader.load_data import load_datapackage
-from data_loader.get_settings import get_data_settings
+from data_loader.load_data import load_datapackage, get_data_settings
 from tokenization.tokenize_df import tokenize_row
 from tokenization.tokenize_string import tokenize_text
 from tfidf.corpus import create_corpus
@@ -15,6 +14,8 @@ import sys
 if len(sys.argv) < 2:
     sys.exit('Need an entity id to explore')
 else:
+    data_settings = get_data_settings()
+    ID_FIELD = data_settings[ENTITY_TO_EXPLORE]["entity_id_fieldname"]  # get the entity id field 
     print("Starting to load data, enetity to explore: {} Based on sources file named {}".format(ENTITY_TO_EXPLORE, SOURCES_FILE))
     df = load_datapackage(ENTITY_TO_EXPLORE)
     print("Starting to tokenize dataframe's items (rows)")
@@ -26,7 +27,7 @@ else:
     print("calculating cosine similarities between the documents based on the given corpus")
     sims = caluclate_similarities(tfidf_matrix=tfidf_matrix, corpus=corpus, num_features=num_features)
 
-    results = find_similiars("order_id",id=sys.argv[1],df=df,dictionary=dictionary,tfidf=tfidf_matrix,sims=sims)
+    results = find_similiars(ID_FIELD,id=sys.argv[1],df=df,dictionary=dictionary,tfidf=tfidf_matrix,sims=sims)
     print("queried item: \n ----------")
     print(df.iloc[results[0][0]])
     print(" \n ---- similars: ---- \n ")

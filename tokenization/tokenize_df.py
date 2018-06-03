@@ -5,7 +5,7 @@ def tokenize_row(df_row):
     Usage example: df['tokenized'] = df.apply(tokenize,axis=1)
     """
     from settings import ENTITY_TO_EXPLORE
-    from data_loader.get_settings import get_data_settings
+    from data_loader.load_data import get_data_settings
     from tokenization.tokenize_string import tokenize_text
 
     data_settings = get_data_settings()

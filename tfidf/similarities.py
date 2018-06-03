@@ -15,7 +15,11 @@ def entity_id_to_df_index(df,column_name, id):
     """
     catch the index number of the desired record by a chosen column (probably 'id')
     """
-    return df.index[df[column_name] == id][0]
+    try:
+        return df.index[df[column_name] == id][0]
+    except:
+        pass
+    return df.index[df[column_name] == int(id)][0]
 
 def index_to_entity_id(df,column_name, row_index):
     """
@@ -47,5 +51,5 @@ def find_similiars(column_name,id,df,dictionary,tfidf,sims):
     results = sorted(enumerate(results), key=lambda item: -item[1])[0:EXPECTED_RESULTS_NUM] # sort by relevancy
     results = [add_id_to_result(df,column_name,result) for result in results if result[1] > 0]  # add the result entity id + filter out results with 0 correlation
     print(len(results)," results:\n" )
-    
+
     return results
