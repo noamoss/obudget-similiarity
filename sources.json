@@ -39,6 +39,25 @@
                       , "decision"
                       , "tender_type"
                   ]
-              }
+              },
 
-  }
+              "budget_changes":
+                  {
+                    "datapackage_path": "http://next.obudget.org/datapackages/budget/national/changes/full/datapackage.json"
+                    ,"entity_id_fieldname": "req_code"
+                    ,"columns_to_index": [ "req_title"
+                                          ,"explanation"
+                                          ]
+                    ,
+                    "meta_columns_list":
+                      [
+                        "budget_code_title"
+                        , "change_code"
+                        , "change_title"
+                        , "change_type_name"
+                        , "pending"
+                        , "transaction_id"
+                        , "year"
+                      ]
+                  }
+}
