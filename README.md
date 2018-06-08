@@ -20,9 +20,9 @@ Notice: Currently, comparison will consider ONLY textual properties. Roadmap inc
 ### Steps and modules (see comments in each of the modules files for further information)
 
 0. settings.py: to define sources file path, define which entity you would like to compare, how many results (similar entities) would you like to get.
-1. [data_loader](../blob/master/data_loader): load data packages and transform into pandas Dataframe
-2. [tokenization](../blob/master/tokeniation): narrow and unify textual elements
-3. [tfidf](../blob/master/tfidf): similarity calculation based on term frequencies and cosinus similarity
+1. [data_loader](../master/data_loader): load data packages and transform into pandas Dataframe
+2. [tokenization](../master/tokeniation): narrow and unify textual elements
+3. [tfidf](../master/tfidf): similarity calculation based on term frequencies and cosinus similarity
 
 
 
