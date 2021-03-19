@@ -14,7 +14,7 @@ idna==2.6
 ijson==2.3
 isodate==0.6.0
 jdcal==1.4
-Jinja2==2.10
+Jinja2==2.11.3
 jmespath==0.9.3
 jsonlines==1.2.0
 jsonpointer==1.14
