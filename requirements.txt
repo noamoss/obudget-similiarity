@@ -21,7 +21,7 @@ jsonpointer==1.14
 jsonschema==2.6.0
 linear-tsv==1.1.0
 MarkupSafe==1.0
-numpy==1.14.3
+numpy==1.22.0
 openpyxl==2.4.11
 pandas==0.22.0
 python-dateutil==2.7.2
